@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 def clean_data(filename):
     df = pd.read_csv(filename, index_col=['LPERMNO', 'datadate'], parse_dates=True)
     df = df.unstack(level=0)
